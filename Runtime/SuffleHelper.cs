@@ -2,17 +2,21 @@ using System;
 using System.Collections.Generic;
 namespace qb.Rnd
 {
+    /// <summary>
+    /// Provides static methods for shuffling the elements of a list using the Fisher-Yates algorithm.
+    /// </summary>
     public static class SuffleHelper
     {
+
         public static void Suffle<T>(IList<T> target)
         {
             if (target == null || target.Count <= 1) return;
             UnSafeSuffle(target, new Random());
         }
-        public static void Suffle<T>(IList<T> target,int seed)
+        public static void Suffle<T>(IList<T> target,int randomSeed)
         {
             if (target == null || target.Count <= 1) return;
-            UnSafeSuffle(target, new Random(seed));
+            UnSafeSuffle(target, new Random(randomSeed));
         }
 
         public static void Suffle<T>(IList<T> target, Random random)

@@ -7,6 +7,10 @@ using TriInspector;
 #endif
 namespace qb.Rnd
 {
+    /// <summary>
+    /// Provides random index selection with configurable probability and draw count rules, supporting various
+    /// probability types and resettable state.
+    /// </summary>
     public class RndIndexProvider : List<IndexEntry>
     {
         #region private 
