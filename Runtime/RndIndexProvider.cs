@@ -81,19 +81,19 @@ namespace qb.Rnd
         #endregion
 
         /// <summary>
-        /// Return true if the provider public methods are ready to be isUsed
+        /// Returns true if the provider public methods are ready to be isUsed
         /// </summary>
         public bool IsReadyToBeUsed => this.Count > 0 && indexes!=null && indexes.Length>0 && availableIndexesCount>0;
 
         /// <summary>
-        /// Return true when there is no more indexes to get (GetIndex method return -1)
+        /// Returns true when there is no more indexes to get (GetIndex method return -1)
         /// This case can be happen when the entries list contains no entry with ProbabilityType.Constant.
         /// To reset the provider and obtain more indexes, the Reset() method must be called.
         /// </summary>
         public bool IsResetNeeded => this.Count > 0 && indexes != null && indexes.Length > 0 && availableIndexesCount == 0;
 
         /// <summary>
-        /// Set all propabilities to be equal
+        /// Sets all propabilities to be equal
         /// </summary>
         /// <returns>The common probabily</returns>
         public float EqualizeAllPropabilties()
@@ -112,7 +112,7 @@ namespace qb.Rnd
         }
 
         /// <summary>
-        /// Initialize the provider random internal tables
+        /// Initializes the provider random internal tables
         /// using the seed parameter to create the random generator
         /// </summary>
         /// <param name="seed">The input seed</param>
@@ -123,7 +123,7 @@ namespace qb.Rnd
         }
 
         /// <summary>
-        /// Initialize random indexes using the random generator parameter
+        /// Initializes random indexes using the random generator parameter
         /// </summary>
         /// <param name="random">The random generator</param>
         public void Initialize(System.Random random)
@@ -133,7 +133,7 @@ namespace qb.Rnd
         }
 
         /// <summary>
-        /// Initialize the provider random internal tables
+        /// Initializes the provider random internal tables
         /// with a common random generator
         /// </summary>
         public void Initialize()
@@ -188,7 +188,7 @@ namespace qb.Rnd
         }
        
         /// <summary>
-        /// Get a random index depending probabilty and random mode entries parameters.
+        /// Gets a random index depending probabilty and random mode entries parameters.
         /// </summary>
         /// <returns>
         /// A valid randomized index or -1 in case or no more index can be got.
@@ -252,7 +252,7 @@ namespace qb.Rnd
         }
 
         /// <summary>
-        /// Reset the internal random indexes
+        /// Resets the internal random indexes
         /// </summary>
         /// <param name="resetDrawCounts">Reset internal draw counts flag for countdown probability type entries</param>
         /// <returns>
@@ -310,7 +310,7 @@ namespace qb.Rnd
         }
 
         /// <summary>
-        /// Get the probability to get the parameter index
+        /// Gets the probability to get the parameter index
         /// </summary>
         /// <param name="index">The index target</param>
         /// <returns>The Selected probability for the index to be get</returns>
@@ -332,7 +332,7 @@ namespace qb.Rnd
         }
 
         /// <summary>
-        /// Set all probability weights to adjust the probability of the index draw with the input 
+        /// Sets all probability weights to adjust the probability of the index draw with the input 
         /// </summary>
         /// <param name="index">The index element to target</param>
         /// <param name="probability">The probabilty to apply</param>
