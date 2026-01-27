@@ -1,0 +1,19 @@
+{
+  "name": "com.quanty-bandit.rnd",
+  "version": "1.0.0",
+  "displayName": "qb.Rnd",
+  "description": "Random and probability tools",
+  "unity": "6000.2",
+  "gitDependencies": {
+    "com.codewriter.triinspector": "https://github.com/codewriter-packages/Tri-Inspector.git"
+  },
+  "keywords": [
+    "Random",
+    "Probability"
+  ],
+  "author": {
+    "name": "quanty bandit",
+    "email": "pascal@quantybandit.com",
+    "url": "https://quantybandit.com"
+  }
+}
