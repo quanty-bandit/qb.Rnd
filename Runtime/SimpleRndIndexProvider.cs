@@ -97,5 +97,15 @@ namespace qb.Rnd
                 indexes[i] = i;
             availableIndexesCount = count;
         }
+
+        /// <summary>
+        /// Gets the number of available indexes.
+        /// </summary>
+        public int AvailableIndexesCount => availableIndexesCount;
+
+        /// <summary>
+        /// Gets the  number of indexes than the provider can deliver.
+        /// </summary>
+        public int TotalIndexesCount => indexes.Length;
     }
 }
