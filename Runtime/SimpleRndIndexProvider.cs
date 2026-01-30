@@ -36,6 +36,7 @@ namespace qb.Rnd
         void Initialize(int count, System.Random random)
         {
             this.random = random;
+            this.indexes = new int[count];
             Reset();
         }
         /// <summary>
