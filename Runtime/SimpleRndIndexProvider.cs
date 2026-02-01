@@ -88,6 +88,14 @@ namespace qb.Rnd
             }
             return false;
         }
+
+        /// <summary>
+        /// Resets the count of available indexes to the total number of indexes.
+        /// </summary>
+        public void RestoreAllIndexes()
+        {
+            availableIndexesCount = indexes.Length;
+        }   
         /// <summary>
         /// Resets the indexes array to its initial sequential state and updates the available indexes count.
         /// </summary>
