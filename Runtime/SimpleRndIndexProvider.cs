@@ -1,4 +1,6 @@
 
+using UnityEngine;
+
 namespace qb.Rnd
 {
     /// <summary>
@@ -116,5 +118,30 @@ namespace qb.Rnd
         /// Gets the  number of indexes than the provider can deliver.
         /// </summary>
         public int TotalIndexesCount => indexes.Length;
+
+        /// <summary>
+        /// Gets or sets the value at the specified index in the collection.
+        /// This operator allows direct access to the underlying indexes array.
+        /// Beware when modifying values directly, as it may affect the behavior of index popping and restoring.
+        /// The indexer does not perform bounds checking !
+        /// </summary>
+        /// <param name="index">The zero-based index of the element to get or set.</param>
+        /// <returns>The value at the specified index.</returns>
+        public int this[int index]
+        {
+            get => indexes[index];
+            set => indexes[index] = value;
+        }
+        /// <summary>
+        /// Sets the number of available indexes, ensuring it is non-negative and does not exceed the length of the
+        /// indexes array.
+        /// This method can be used to limit or restore the initial range of available indexes.
+        /// </summary>
+        /// <param name="count">The desired number of available indexes.</param>
+        public void SetAvailableIndexesCount(int count)
+        {
+            if(count>=0)
+                availableIndexesCount = Mathf.Min(count, indexes.Length);
+        }   
     }
 }

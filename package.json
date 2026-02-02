@@ -1,6 +1,6 @@
 {
   "name": "com.quanty-bandit.rnd",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "displayName": "qb.Rnd",
   "description": "Random and probability tools",
   "unity": "6000.2",
